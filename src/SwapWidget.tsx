@@ -1,0 +1,55 @@
+import Swap from "./components/Swap"
+import Provider from "./provider"
+import "./index.css"
+import "unfonts.css"
+import { TokenType } from "./packages/config"
+
+export type Theme = {
+  colorPrimaryText?: string
+  colorSecondaryText?: string
+  colorInputText?: string
+  colorGrayText?: string
+  colorLinkText?: string
+  colorMailText?: string
+  colorPrimaryBackground?: string
+  colorSecondaryBackground?: string
+  colorDialogHeaderBackground?: string
+  colorDialogBodyBackground?: string
+  colorInputBackground?: string
+  colorPrimaryBorder?: string
+  colorSecondaryBorder?: string
+  colorInputFocusBorder?: string
+  colorActiveButton?: string
+  colorLinkButton?: string
+  colorPrimaryButton?: string
+  colorPrimaryHoverButton?: string
+  colorSecondaryButton?: string
+  colorSecondaryHoverButton?: string
+  colorLightButton?: string
+  colorLightHoverButton?: string
+  colorLightActiveButton?: string
+  colorSuccessBackground?: string
+  colorErrorBackground?: string
+  colorInfoBackground?: string
+  colorErrorText?: string
+  colorWarningText?: string
+}
+
+export type SwapWidgetProps = {
+  width?: number
+  mode?: "buy" | "swap"
+  inputToken?: TokenType
+  outputToken?: TokenType
+  amount?: string
+  theme?: Theme
+}
+
+function SwapWidget(props: SwapWidgetProps) {
+  return (
+    <Provider>
+      <Swap {...props} />
+    </Provider>
+  )
+}
+
+export default SwapWidget
