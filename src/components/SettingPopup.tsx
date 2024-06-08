@@ -23,7 +23,7 @@ const SettingPopup = () => {
 
   return (
     <Menu>
-      <MenuButton className="flex items-center justify-center w-12 h-12 text-[--color-primary-text] rounded-full border border-[--color-primary-border] hover:bg-[--color-secondary-background] transition-all">
+      <MenuButton className="flex items-center justify-center w-12 h-12 text-[--color-primary-text] rounded-full border border-[--color-primary-border] hover:brightness-90 transition-all">
         <TwoLine />
       </MenuButton>
       <Transition
@@ -36,7 +36,7 @@ const SettingPopup = () => {
       >
         <MenuItems
           anchor="bottom"
-          className="relative mt-2 rounded-xl bg-[--color-secondary-background] border border-[--color-primary-border] shadow-[0px_8px_24px_-8px_rgba(175,178,237,0.24)] w-[375px]"
+          className="relative mt-2 rounded-xl bg-[--color-primary-background] border border-[--color-primary-border] shadow-[0px_8px_24px_-8px_rgba(175,178,237,0.24)] w-[375px]"
         >
           <MenuItem>
             {({ close }) => (
@@ -59,14 +59,14 @@ const SettingPopup = () => {
                       <div className="flex items-center space-x-1">
                         <button
                           data-active={slippage === 0.1}
-                          className="data-[active=true]:bg-[--color-active-button] rounded-xl font-semibold h-10 w-[70px] border border-[--color-primary-border] hover:bg-[--color-primary-border] focus:bg-[--color-active-button] text-[--color-primary-text] transition-all"
+                          className="data-[active=true]:bg-[--color-secondary-background] data-[active=true]:text-[--color-active-text] rounded-xl font-semibold h-10 w-[70px] border border-[--color-primary-border] hover:bg-[--color-secondary-background] hover:text-[--color-active-text] text-[--color-primary-text] transition-all"
                           onClick={() => setSlippage(0.1)}
                         >
                           0.1%
                         </button>
                         <button
                           data-active={slippage === 0.5}
-                          className="data-[active=true]:bg-[--color-active-button] rounded-xl font-semibold h-10 w-[70px] border border-[--color-primary-border] hover:bg-[--color-primary-border] focus:bg-[--color-active-button] text-[--color-primary-text] transition-all"
+                          className="data-[active=true]:bg-[--color-secondary-background] data-[active=true]:text-[--color-active-text] rounded-xl font-semibold h-10 w-[70px] border border-[--color-primary-border] hover:bg-[--color-secondary-background] hover:text-[--color-active-text] text-[--color-primary-text] transition-all"
                           onClick={() => setSlippage(0.5)}
                         >
                           0.5%
@@ -74,7 +74,7 @@ const SettingPopup = () => {
                         <button
                           data-active={slippage === 1}
                           onClick={() => setSlippage(1)}
-                          className="data-[active=true]:bg-[--color-active-button] rounded-xl font-semibold h-10 w-[70px] border border-[--color-primary-border] hover:bg-[--color-primary-border] focus:bg-[--color-active-button] text-[--color-primary-text] transition-all"
+                          className="data-[active=true]:bg-[--color-secondary-background] data-[active=true]:text-[--color-active-text] rounded-xl font-semibold h-10 w-[70px] border border-[--color-primary-border] hover:bg-[--color-secondary-background] hover:text-[--color-active-text] text-[--color-primary-text] transition-all"
                         >
                           1%
                         </button>
@@ -90,7 +90,7 @@ const SettingPopup = () => {
                             )
                           }
                           placeholder="0.5"
-                          className="w-full h-10 px-4 border font-semibold border-[--color-primary-border] hover:border-[--color-primary-border] rounded-2xl transition-all bg-transparent focus:border-[--color-input-focus-border] focus:shadow-[0px_0px_0px_1px_--color-input-focus-border] text-[--color-primary-text] outline-none placeholder:font-normal [&::-webkit-inner-spin-button]:hidden"
+                          className="w-full h-10 px-4 border font-semibold border-[--color-primary-border] rounded-2xl transition-all bg-transparent text-[--color-primary-text] outline-none placeholder:font-normal placeholder:text-[--color-secondary-text] [&::-webkit-inner-spin-button]:hidden"
                         />
                         <span className="absolute top-0 right-0 w-10 h-10 flex justify-center items-center text-[--color-primary-text]">
                           %
@@ -119,7 +119,7 @@ const SettingPopup = () => {
                         placeholder="30"
                         value={deadline}
                         onChange={(e) => setDeadline(e.target.valueAsNumber)}
-                        className="w-full h-10 px-4 border font-semibold border-[--color-primary-border] hover:border-[--color-primary-border] rounded-2xl transition-all bg-transparent focus:border-[--color-input-focus-border] focus:shadow-[0px_0px_0px_1px_--color-input-focus-border] text-[--color-primary-text] outline-none placeholder:font-normal [&::-webkit-inner-spin-button]:hidden"
+                        className="w-full h-10 px-4 border font-semibold border-[--color-primary-border] rounded-2xl transition-all bg-transparent text-[--color-primary-text] outline-none placeholder:font-normal placeholder:text-[--color-secondary-text] [&::-webkit-inner-spin-button]:hidden"
                       />
                       <span className="absolute top-0 right-4 h-10 flex justify-center items-center text-[--color-primary-text]">
                         minutes

@@ -14,12 +14,13 @@ import Spinner from "../Spinner"
 import { useDebounce } from "../../hooks/useDebounce"
 import MasterCard from "../../assets/master_card.svg"
 import Visa from "../../assets/visa.svg"
-import AmEx from "../../assets/amex.png"
+import AmEx from "../../assets/amex.svg"
 import JCB from "../../assets/jcb.svg"
-import Discover from "../../assets/Discover.png"
+import Discover from "../../assets/discover.svg"
 import { SWAP_FEE } from "../../constants"
 import { fetchTokenInfo } from "../../utils/token"
 import { TokenType } from "../../packages/config"
+import CCRecipient from "./CCRecipient"
 
 interface CCPanelProps {
   amount?: string
@@ -149,7 +150,7 @@ const CCPanel: React.FC<CCPanelProps> = ({ amount, outputToken }) => {
 
   return (
     <>
-      <div className="bg-[--color-secondary-background] relative p-4 md:p-8 mt-4 border border-[--color-primary-border] rounded-lg md:rounded-[32px]">
+      <div className="bg-[--color-primary-background] relative p-4 md:p-8 mt-4 border border-[--color-primary-border] rounded-lg md:rounded-[32px]">
         <CCFiatSide amount={fiatAmount} setAmount={setFiatAmount} />
         <div className="border border-[--color-primary-border] w-full my-5"></div>
         <SwapSide
@@ -157,23 +158,14 @@ const CCPanel: React.FC<CCPanelProps> = ({ amount, outputToken }) => {
           token={tokenOut}
           amount={amountOut ?? ""}
           setToken={setTokenOut}
-          hideSide
           hideBalance
           primaryTokens
           disabled
         />
         <div className="border border-[--color-primary-border] w-full my-5"></div>
-        <div>
-          <input
-            type="text"
-            value={recipient}
-            onChange={(e) => setRecipient(e.target.value)}
-            className="w-full h-12 max-sm:data-[fast=true]:h-[72px] outline-none text-[30px] bg-transparent text-[--color-input-text] font-semibold placeholder:text-[--color-secondary-text]"
-            placeholder="Recipient Address"
-          />
-        </div>
+        <CCRecipient value={recipient} setValue={setRecipient} />
         <button
-          className="flex items-center justify-center h-12 w-full bg-[--color-primary-button] text-[--color-primary-text] border-b-2 border-[--color-secondary-border] enabled:hover:bg-[--color-secondary-border] enabled:hover:border-[--color-secondary-button] transition-all rounded-full font-semibold disabled:opacity-70 disabled:cursor-not-allowed mt-8"
+          className="flex items-center justify-center h-12 w-full bg-[--color-secondary-background] text-[--color-active-text] border-b-2 border-[--color-secondary-border] enabled:hover:brightness-90 transition-all rounded-full font-semibold disabled:opacity-70 disabled:cursor-not-allowed mt-8"
           disabled={invalidAddress || invalidAmount || loading}
           onClick={onBuy}
         >
@@ -200,27 +192,27 @@ const CCPanel: React.FC<CCPanelProps> = ({ amount, outputToken }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={MasterCard} alt="MasterCard" className="w-10" />
+          <img src={MasterCard} alt="MasterCard" className="w-10 invert" />
         </a>
         <a href={"https://usa.visa.com/"} target="_blank" rel="noreferrer">
-          <img src={Visa} alt="Visa" className="w-10" />
+          <img src={Visa} alt="Visa" className="w-10 invert" />
         </a>
         <a
           href={"https://www.americanexpress.com/"}
           target="_blank"
           rel="noreferrer"
         >
-          <img src={AmEx} alt="AmEx" className="w-8" />
+          <img src={AmEx} alt="AmEx" className="w-8 invert" />
         </a>
         <a
           href={"https://www.global.jcb/en/products/cards/index.html"}
           target="_blank"
           rel="noreferrer"
         >
-          <img src={JCB} alt="JCB" className="w-10" />
+          <img src={JCB} alt="JCB" className="w-10 invert" />
         </a>
         <a href={"https://www.discover.com"} target="_blank" rel="noreferrer">
-          <img src={Discover} alt="Discover" className="w-10" />
+          <img src={Discover} alt="Discover" className="w-10 invert" />
         </a>
       </div>
     </>

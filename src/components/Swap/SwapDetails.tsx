@@ -50,7 +50,7 @@ const SwapDetails: React.FC<SwapDetailsProps> = ({ trade }) => {
       >
         <div className="gap-0.5 pt-4 pb-6">
           <div className="flex items-start justify-between">
-            <span className="text-[--color-gray-text] text-sm">Expected Output:</span>
+            <span className="text-[--color-primary-text] text-sm">Expected Output:</span>
             <span className="text-[--color-primary-text] text-sm font-semibold">
               {Amount.fromRawAmount(
                 tokenOut,
@@ -60,7 +60,7 @@ const SwapDetails: React.FC<SwapDetailsProps> = ({ trade }) => {
             </span>
           </div>
           <div className="flex items-start justify-between">
-            <span className="text-[--color-gray-text] text-sm">Minimum Received:</span>
+            <span className="text-[--color-primary-text] text-sm">Minimum Received:</span>
             <span className="text-[--color-primary-text] text-sm font-semibold">
               {Amount.fromRawAmount(
                 tokenOut,
@@ -72,7 +72,7 @@ const SwapDetails: React.FC<SwapDetailsProps> = ({ trade }) => {
             </span>
           </div>
           <div className="flex items-start justify-between">
-            <span className="text-[--color-gray-text] text-sm">Price Impact:</span>
+            <span className="text-[--color-primary-text] text-sm">Price Impact:</span>
             <span className="text-[--color-primary-text] text-sm font-semibold">
               {(trade.data?.[0]?.priceImpact ?? 0) < 0.01
                 ? "<0.01%"
@@ -80,7 +80,7 @@ const SwapDetails: React.FC<SwapDetailsProps> = ({ trade }) => {
             </span>
           </div>
           <div className="flex items-start justify-between">
-            <span className="text-[--color-gray-text] text-sm">Fees:</span>
+            <span className="text-[--color-primary-text] text-sm">Fees:</span>
             <span className="text-[--color-primary-text] text-sm font-semibold">0 ETH</span>
           </div>
         </div>

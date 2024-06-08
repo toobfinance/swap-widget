@@ -23,27 +23,14 @@ const Swap = ({
     const styles = {
       "--color-primary-text": theme?.colorPrimaryText,
       "--color-secondary-text": theme?.colorSecondaryText,
-      "--color-input-text": theme?.colorInputText,
-      "--color-gray-text": theme?.colorGrayText,
-      "--color-link-text": theme?.colorLinkText,
+      "--color-active-text": theme?.colorActiveText,
       "--color-mail-text": theme?.colorMailText,
       "--color-primary-background": theme?.colorPrimaryBackground,
       "--color-secondary-background": theme?.colorSecondaryBackground,
-      "--color-dialog-header-background": theme?.colorDialogHeaderBackground,
-      "--color-dialog-body-background": theme?.colorDialogBodyBackground,
-      "--color-input-background": theme?.colorInputBackground,
+      "--color-hover-background": theme?.colorHoverBackground,
+      "--color-link-background": theme?.colorLinkBackground,
       "--color-primary-border": theme?.colorPrimaryBorder,
       "--color-secondary-border": theme?.colorSecondaryBorder,
-      "--color-input-focus-border": theme?.colorInputFocusBorder,
-      "--color-active-button": theme?.colorActiveButton,
-      "--color-link-button": theme?.colorLinkButton,
-      "--color-primary-button": theme?.colorPrimaryButton,
-      "--color-primary-hover-button": theme?.colorPrimaryHoverButton,
-      "--color-secondary-button": theme?.colorSecondaryButton,
-      "--color-secondary-hover-button": theme?.colorSecondaryHoverButton,
-      "--color-light-button": theme?.colorLightButton,
-      "--color-light-hover-button": theme?.colorLightHoverButton,
-      "--color-light-active-button": theme?.colorLightActiveButton,
       "--color-success-background": theme?.colorSuccessBackground,
       "--color-error-background": theme?.colorErrorBackground,
       "--color-info-background": theme?.colorInfoBackground,
@@ -73,14 +60,14 @@ const Swap = ({
         <div className="flex items-center space-x-2">
           <button
             data-active={selectedTab === 1}
-            className="bg-transparent border border-[--color-primary-border] rounded-full text-[--color-secondary-text] data-[active=true]:text-[--color-primary-text] py-3 px-4 data-[active=true]:bg-[--color-secondary-background] font-semibold"
+            className="bg-transparent border border-[--color-primary-border] rounded-full text-[--color-primary-text] data-[active=true]:text-[--color-active-text] py-3 px-4 data-[active=true]:bg-[--color-secondary-background] font-semibold"
             onClick={() => setSelectedTab(1)}
           >
             Buy
           </button>
           <button
             data-active={selectedTab === 0}
-            className="bg-transparent border border-[--color-primary-border] rounded-full text-[--color-secondary-text] data-[active=true]:text-[--color-primary-text] py-3 px-4 data-[active=true]:bg-[--color-secondary-background] font-semibold"
+            className="bg-transparent border border-[--color-primary-border] rounded-full text-[--color-primary-text] data-[active=true]:text-[--color-active-text] py-3 px-4 data-[active=true]:bg-[--color-secondary-background] font-semibold"
             onClick={() => setSelectedTab(0)}
           >
             Swap

@@ -184,7 +184,7 @@ const SwapButton: React.FC<SwapButtonProps> = ({ trade }) => {
       (approvalState === ApprovalState.NOT_APPROVED ||
         approvalState === ApprovalState.PENDING) ? (
         <button
-          className="flex items-center justify-center h-12 w-full bg-[--color-primary-button] text-[--color-primary-text] border-b-2 border-[--color-secondary-border] enabled:hover:bg-[--color-secondary-border] enabled:hover:border-[--color-secondary-button] transition-all rounded-full mt-8 font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
+          className="flex items-center justify-center h-12 w-full bg-[--color-secondary-background] text-[--color-active-text] border-b-2 border-[--color-secondary-border] enabled:hover:brightness-90 transition-all rounded-full font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
           onClick={onApprove}
           disabled={approvalState === ApprovalState.PENDING}
         >
@@ -197,7 +197,7 @@ const SwapButton: React.FC<SwapButtonProps> = ({ trade }) => {
         </button>
       ) : null}
       <button
-        className="flex items-center justify-center h-12 w-full bg-[--color-primary-button] text-[--color-primary-text] border-b-2 border-[--color-secondary-border] enabled:hover:bg-[--color-secondary-border] enabled:hover:border-[--color-secondary-button] transition-all rounded-full font-semibold disabled:opacity-70 disabled:cursor-not-allowed mt-4"
+        className="flex items-center justify-center h-12 w-full bg-[--color-secondary-background] text-[--color-active-text] border-b-2 border-[--color-secondary-border] enabled:hover:brightness-90 transition-all rounded-full font-semibold disabled:opacity-70 disabled:cursor-not-allowed mt-4"
         onClick={onSwap}
         disabled={
           (address &&

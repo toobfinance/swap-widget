@@ -5,34 +5,21 @@ import "unfonts.css"
 import { TokenType } from "./packages/config"
 
 export type Theme = {
-  colorPrimaryText?: string
-  colorSecondaryText?: string
-  colorInputText?: string
-  colorGrayText?: string
-  colorLinkText?: string
-  colorMailText?: string
-  colorPrimaryBackground?: string
-  colorSecondaryBackground?: string
-  colorDialogHeaderBackground?: string
-  colorDialogBodyBackground?: string
-  colorInputBackground?: string
-  colorPrimaryBorder?: string
-  colorSecondaryBorder?: string
-  colorInputFocusBorder?: string
-  colorActiveButton?: string
-  colorLinkButton?: string
-  colorPrimaryButton?: string
-  colorPrimaryHoverButton?: string
-  colorSecondaryButton?: string
-  colorSecondaryHoverButton?: string
-  colorLightButton?: string
-  colorLightHoverButton?: string
-  colorLightActiveButton?: string
-  colorSuccessBackground?: string
-  colorErrorBackground?: string
-  colorInfoBackground?: string
-  colorErrorText?: string
-  colorWarningText?: string
+  colorPrimaryText: string
+  colorSecondaryText: string
+  colorActiveText: string
+  colorMailText: string
+  colorPrimaryBackground: string
+  colorSecondaryBackground: string
+  colorHoverBackground: string
+  colorLinkBackground: string
+  colorPrimaryBorder: string
+  colorSecondaryBorder: string
+  colorSuccessBackground: string
+  colorErrorBackground: string
+  colorInfoBackground: string
+  colorErrorText: string
+  colorWarningText: string
 }
 
 export type SwapWidgetProps = {

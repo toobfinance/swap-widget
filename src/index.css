@@ -3,29 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-primary-text: #1f1d1a;
-  --color-secondary-text: #afa392;
-  --color-input-text: #31291e;
-  --color-gray-text: #7c7872;
-  --color-link-text: #866f4d;
+  --color-primary-text: black;
+  --color-secondary-text: #00000099;
+  --color-active-text: white;
   --color-mail-text: #6666f1;
-  --color-primary-background: #ddd;
-  --color-secondary-background: #e4e4e4;
-  --color-dialog-header-background: #e9e1d4;
-  --color-dialog-body-background: #f3f3f3;
-  --color-input-background: white;
-  --color-primary-border: #e2cdae;
-  --color-secondary-border: #d1bc9c;
-  --color-input-focus-border: #e9bd7a;
-  --color-active-button: #e2d0b4;
-  --color-link-button: #ebd8bb4c;
-  --color-primary-button: #d8c7ad;
-  --color-primary-hover-button: #dfcaaa99;
-  --color-secondary-button: #c0ac8e;
-  --color-secondary-hover-button: #e9e1d4;
-  --color-light-button: #f3f0ee;
-  --color-light-hover-button: #f1eadf;
-  --color-light-active-button: #e6e1d9;
+  --color-primary-background: white;
+  --color-secondary-background: black;
+  --color-hover-background: #00000019;
+  --color-link-background: #0000007f;
+  --color-primary-border: #0000004c;
+  --color-secondary-border: #222;
   --color-success-background: #71bd98;
   --color-error-background: #fa9f9f;
   --color-info-background: white;

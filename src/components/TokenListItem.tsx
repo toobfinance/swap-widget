@@ -34,7 +34,7 @@ const TokenListItem: React.FC<TokenListItemProps> = ({
   return (
     <>
       <div
-        className={`flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-[--color-secondary-hover-button] transition-all cursor-pointer ${
+        className={`flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-[--color-hover-background] transition-all cursor-pointer ${
           className ?? ""
         }`}
         onClick={

@@ -98,7 +98,7 @@ const TokenListModal: React.FC<TokenListModalProps> = ({
           />
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full items-center justify-center">
-              <DialogPanel className="relative w-full max-w-md bg-[--color-dialog-header-background] rounded-2xl backdrop-blur-2xl overflow-hidden">
+              <DialogPanel className="relative w-full max-w-md border border-[--color-primary-border] bg-[--color-primary-background] rounded-2xl backdrop-blur-2xl overflow-hidden">
                 <h3 className="px-6 py-4 text-xl font-semibold text-[--color-primary-text]">
                   Select a token
                 </h3>
@@ -116,7 +116,7 @@ const TokenListModal: React.FC<TokenListModalProps> = ({
                     value={filter}
                     onChange={(e) => setFilter(e.target.value)}
                     placeholder="Search by name, symbol or address"
-                    className="w-full h-12 text-lg outline-none text-[--color-primary-text] border border-[--color-secondary-border] hover:border-[--color-primary-border] rounded-xl transition-all bg-[--color-input-background] focus:border-[--color-input-focus-border] focus:shadow-[--color-input-focus-border_0px_0px_0px_1px] pl-10 pr-4"
+                    className="w-full h-12 text-lg outline-none bg-[--color-primary-background] text-[--color-primary-text] border border-[--color-primary-border] rounded-xl transition-all focus:shadow-[#fff7_0px_0px_0px_2px] pl-10 pr-4 placeholder:text-[--color-secondary-text]"
                   />
                 </div>
                 <div className="flex items-center mx-4 text-xs text-[--color-primary-text] my-2 font-medium">
@@ -125,13 +125,13 @@ const TokenListModal: React.FC<TokenListModalProps> = ({
                     <div className="whitespace-nowrap">Please contact:</div>
                     <a
                       href={"mailto:team@toob.finance"}
-                      className="underline text---color-mail-text]"
+                      className="underline text-[--color-mail-text]"
                     >
                       team@toob.finance
                     </a>
                   </HelpToolTip>
                 </div>
-                <div className="flex flex-col bg-[--color-dialog-body-background] rounded-es-2xl rounded-ee-2xl p-4 space-y-2 h-[66vh] overflow-y-auto">
+                <div className="flex flex-col rounded-es-2xl rounded-ee-2xl p-4 space-y-2 h-[66vh] overflow-y-auto">
                   {tokens
                     .sort((a, b) =>
                       (a.symbol ?? "") > (b.symbol ?? "") ? 1 : -1

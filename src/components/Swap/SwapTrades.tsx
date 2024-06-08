@@ -28,7 +28,7 @@ const SwapTrades: React.FC<SwapTradesProps> = ({ trades }) => {
           {sortTrades.map((item: any) => (
             <div
               key={item.type}
-              className="flex items-center justify-between first:font-bold text-[--color-gray-text] first:text-[--color-primary-text] text-sm"
+              className="flex items-center justify-between first:font-bold text-[--color-primary-text] text-sm"
             >
               <span className="no-underline">
                 {Amount.fromRawAmount(

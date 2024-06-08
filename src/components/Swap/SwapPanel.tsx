@@ -50,7 +50,7 @@ const SwapPanel: React.FC<SwapPanelProps> = ({
   const trade = useSwapTrade()
 
   return (
-    <div className="bg-[--color-secondary-background] relative p-4 md:p-8 mt-4 border border-[--color-primary-border] rounded-lg md:rounded-[32px]">
+    <div className="bg-[--color-primary-background] relative p-4 md:p-8 mt-4 border border-[--color-primary-border] rounded-lg md:rounded-[32px]">
       <SwapSide
         side="From"
         token={tokenIn}
